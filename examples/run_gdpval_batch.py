@@ -6,7 +6,7 @@ workspace per task with reference files, runs the codelet agent with the task
 prompt, and collects deliverables.
 
 Usage:
-    python3 run_gdpval_batch.py [--start N] [--end N] [--max-tasks N]
+    python3 examples/run_gdpval_batch.py [--start N] [--end N] [--max-tasks N]
 
 Progress is saved to gdpval_results/progress.json so interrupted runs can resume.
 """
@@ -27,7 +27,7 @@ import pandas as pd
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-REPO_ROOT = Path(__file__).parent.resolve()
+REPO_ROOT = Path(__file__).resolve().parent.parent
 DATASET_DIR = REPO_ROOT / "gdpval_dataset"
 PARQUET_PATH = DATASET_DIR / "data" / "train-00000-of-00001.parquet"
 RESULTS_DIR = REPO_ROOT / "gdpval_results"
